@@ -10,9 +10,9 @@ import org.junit.runner.RunWith;
                 "html:target/cucumber-reports/cucumber.html",
                 "json:target/cucumber-reports/cucumber.json"
         },
-        //tags = {"@regression, @GUI"},
+//        tags = {"@regression"},
         //For running the regression only scenarios uncomment the below tags and comment the original
-//        tags = {"@regression},
+
         features = "src/test/resources/features/"
         ,glue={"Steps"}
 )

@@ -1,6 +1,6 @@
 Feature: Validation of type of triangle returned when sides are input
-
-  Scenario Outline: Verify triangle type is returned
+  @regression
+  Scenario Outline: Verify triangle type is returned by the application on providing the sides length
     Given triangle <sides> length are input
     And triangle is valid
     Then triangle <type> is returned
@@ -12,7 +12,7 @@ Feature: Validation of type of triangle returned when sides are input
       | 9,6,4 | Scalene Triangle     |
       | 9,9,4 | Isosceles Triangle   |
 
-  Scenario Outline: Validate error type is returned on non zero inputs
+  Scenario Outline: Validate error type triangle is returned on non zero inputs
     Given triangle <sides> length are input
     Then triangle <type> is returned
     Examples:

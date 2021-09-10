@@ -16,13 +16,13 @@ public class TriangleTestsStepDef {
     public void triangleSidesLengthAreInput(String data) {
         String[] input = data.split(",");
         try {
-            A = Integer.parseInt(input[0]);
-            B = Integer.parseInt(input[1]);
-            C = Integer.parseInt(input[2]);
+                A = Integer.parseInt(input[0]);
+                B = Integer.parseInt(input[1]);
+                C = Integer.parseInt(input[2]);
         } catch (Exception e) {
-            System.out.print("An Error occured while parsing the input");
+            System.out.print("An Error occurred while parsing the input");
             e.printStackTrace();
-        }finally {
+        } finally {
             System.out.println("Calculated values from the String");
         }
 
@@ -39,7 +39,7 @@ public class TriangleTestsStepDef {
     @Then("triangle (.*) is returned")
     public void triangleTypeIsReturned(String triangleType) {
 
-        Assert.assertEquals(triangleType,getTriangleName(returnTriangleType(A,B,C)));
+        Assert.assertEquals(triangleType, getTriangleName(returnTriangleType(A, B, C)));
     }
 
     public static Integer returnTriangleType(int a, int b, int c) {
@@ -65,19 +65,19 @@ public class TriangleTestsStepDef {
         switch (value) {
             case 1:
                 type = "Scalene Triangle";
-            break;
+                break;
             case 2:
                 type = "Isosceles Triangle";
-            break;
+                break;
             case 3:
                 type = "Equilateral Triangle";
-            break;
+                break;
             case 4:
                 type = "Error";
-            break;
+                break;
 
             default:
-                throw new IllegalStateException("Unexpected value: " + value);
+                throw new IllegalStateException("Unexpected value passed : " + value);
         }
         return type;
 
